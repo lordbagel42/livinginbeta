@@ -1,15 +1,17 @@
 import daisyui from 'daisyui';
 
-/** @type {import('tailwindcss').Config} */
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				'scrollbar-thumb': '#888',
+				'scrollbar-track': '#ddd'
+			}
+		}
 	},
-
-	plugins: [daisyui],
-
 	daisyui: {
-		themes: ['dark']
-	}
+		themes: ['fantasy', 'business']
+	},
+	plugins: [daisyui, require('tailwind-scrollbar')({ nocompatible: true })]
 };
