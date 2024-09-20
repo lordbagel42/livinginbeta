@@ -18,6 +18,7 @@
 		{ label: 'math', link: '/math' },
 		// is part of permanent button { label: 'contact', link: '/contact' },
 		{ label: 'flex lab', link: '/flex-lab' },
+		{ label: 'games', link: '/games' },
 		{ label: 'blog', link: '/blog' },
 		...[projects]
 	];
