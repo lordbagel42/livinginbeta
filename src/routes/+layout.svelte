@@ -5,19 +5,20 @@
 
 	const projects = {
 		label: 'projects',
+		projectsLink: '/projects',
 		submenu: [
 			{ label: 'overview', link: '/projects' },
-			{ label: 'bagelindustries', link: '/projects/bagelindustries' },
-			{ label: 'project 2', link: '/' }
+			{ label: 'project 1', link: '/projects/project1' },
+			{ label: 'project 2', link: '/projects/project2' }
 		]
 	};
 
 	const navbarItems = [
 		{ label: 'about me', link: '/about' },
-		{ label: 'other thing', link: '/' },
+		{ label: 'math', link: '/math' },
 		// is part of permanent button { label: 'contact', link: '/contact' },
+		{ label: 'flex lab', link: '/flex-lab' },
 		{ label: 'blog', link: '/blog' },
-		{ label: 'quotes', link: '/quotes' },
 		...[projects]
 	];
 </script>

@@ -14,6 +14,9 @@ importers:
       tailwind-scrollbar:
         specifier: ^3.1.0
         version: 3.1.0(tailwindcss@3.4.4)
+      typeit:
+        specifier: ^8.8.5
+        version: 8.8.5
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^3.0.0
@@ -642,6 +645,9 @@ packages:
 
   '@types/unist@2.0.11':
     resolution: {integrity: sha512-CmBKiL6NNo/OqgmMn95Fk9Whlp2mtvIv+KNpQKN2F4SjvrEesubTRWGYSg+BnWZOnlCaSTU1sMpsBOzgbYhnsA==}
+
+  '@types/web-animations-js@2.2.16':
+    resolution: {integrity: sha512-ATELeWMFwj8eQiH0KmvsCl1V2lu/qx/CjOBmv4ADSZS5u8r4reMyjCXtxG7khqyiwH3IOMNdrON/Ugn94OUcRA==}
 
   '@typescript-eslint/eslint-plugin@8.0.0-alpha.29':
     resolution: {integrity: sha512-lEjQc/jfr3MePgq0mxbAIvAvzInotE48L8bAwfoHkdwBTJxpwN9ywjEvgBIZ8dRssvdm49stItPFazDnZnMWMA==}
@@ -1782,6 +1788,9 @@ packages:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
 
+  typeit@8.8.5:
+    resolution: {integrity: sha512-gtrTDKmBVzqyC7KBSBdhHwZOPhXcnP6gceMRXde0dxSN1DLHX9uzjC/Aj444/n4/UYLY8CpjXokWSvIjZPfckQ==}
+
   typescript-eslint@8.0.0-alpha.29:
     resolution: {integrity: sha512-NASQjd4tP+wukSs/Cj8vHjK/Ogk0nhVOr/kwzwg0AaXOWiz0g+rtE+lvqAaV+nhsCfMskuzKzc1TywFrhJlbvw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
@@ -2337,6 +2346,8 @@ snapshots:
   '@types/pug@2.0.10': {}
 
   '@types/unist@2.0.11': {}
+
+  '@types/web-animations-js@2.2.16': {}
 
   '@typescript-eslint/eslint-plugin@8.0.0-alpha.29(@typescript-eslint/parser@8.0.0-alpha.29(eslint@9.4.0)(typescript@5.4.5))(eslint@9.4.0)(typescript@5.4.5)':
     dependencies:
@@ -3526,6 +3537,10 @@ snapshots:
   type-check@0.4.0:
     dependencies:
       prelude-ls: 1.2.1
+
+  typeit@8.8.5:
+    dependencies:
+      '@types/web-animations-js': 2.2.16
 
   typescript-eslint@8.0.0-alpha.29(eslint@9.4.0)(typescript@5.4.5):
     dependencies:
