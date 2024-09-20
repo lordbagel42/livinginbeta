@@ -57,7 +57,7 @@
 				{/each}
 			</ul>
 		</div>
-		<a href="/" class="btn btn-ghost text-xl">sylviethedev</a>
+		<a href="/" class="btn btn-ghost text-xl">sylvie</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<!-- hidden on small screens -->
