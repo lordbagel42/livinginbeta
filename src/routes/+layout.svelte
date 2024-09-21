@@ -13,14 +13,24 @@
 		]
 	};
 
+	const flexLab = {
+		label: 'flex lab',
+		flexLabLink: '/flex-lab',
+		submenu: [
+			{ label: 'projects', link: '/flex-lab/projects' },
+			{ label: 'plans', link: '/flex-lab/plans' },
+			{ label: 'reflections', link: '/flex-lab/reflections' }
+		]
+	};
+
 	const navbarItems = [
 		{ label: 'about me', link: '/about' },
 		{ label: 'math', link: '/math' },
 		// is part of permanent button { label: 'contact', link: '/contact' },
-		{ label: 'flex lab', link: '/flex-lab' },
 		{ label: 'games', link: '/games' },
 		{ label: 'blog', link: '/blog' },
-		...[projects]
+		...[projects],
+		...[flexLab]
 	];
 </script>
 
