@@ -3,40 +3,65 @@
 @tailwind utilities;
 
 .h-view {
-	height: calc(100vh - 70px);
-}
-
-.prose :is(h2, h3, h4, h5, h6) {
-	margin-top: var(--size-8);
-	margin-bottom: var(--size-3);
-}
-
-.prose p:not(:is(h2, h3, h4, h5, h6) + p) {
-	margin-top: var(--size-7);
-}
-
-.prose :is(ul, ol) {
-	list-style-type: '🔥';
-	padding-left: var(--size-5);
-}
-
-.prose :is(ul, ol) li {
-	margin-block: var(--size-2);
-	padding-inline-start: var(--size-2);
-}
-
-.prose pre {
-	max-inline-size: 100%;
-	padding: 1rem;
-	border-radius: 8px;
-	tab-size: 2;
+	@apply h-[calc(100vh-70px)];
 }
 
 *::-webkit-scrollbar {
-	display: none;
+	@apply hidden;
 }
 
 * {
-	-ms-overflow-style: none;
-	scrollbar-width: none;
+	@apply scrollbar-none;
+}
+
+div.prose img {
+	@apply mx-auto my-4 rounded-lg;
+}
+
+div.prose h1 {
+	@apply text-2xl font-bold mb-4;
+}
+
+div.prose h2 {
+	@apply text-xl font-bold mb-3;
+}
+
+div.prose h3 {
+	@apply text-lg font-bold mb-2;
+}
+
+div.prose h4 {
+	@apply text-base font-bold mb-1;
+}
+
+div.prose h5 {
+	@apply text-sm font-bold mb-1;
+}
+
+div.prose h6 {
+	@apply text-xs font-bold mb-1;
+}
+
+div.prose p {
+	@apply text-base mb-4;
+}
+
+div.prose ul {
+	@apply list-disc mb-4;
+}
+
+div.prose ol {
+	@apply list-decimal mb-4;
+}
+
+div.prose a {
+	@apply text-blue-500;
+}
+
+div.prose a:hover {
+	@apply text-blue-700;
+}
+
+div.prose code {
+	@apply rounded p-1;
 }
