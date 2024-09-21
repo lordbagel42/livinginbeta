@@ -12,6 +12,7 @@
 	};
 
 	export let items: MenuItem[] = [];
+	export let currentPage: string = '';
 
 	const hasSubmenu = (item: MenuItem): boolean => Boolean(item.submenu && item.submenu.length > 0);
 </script>
@@ -25,22 +26,35 @@
 		<div class="hidden lg:flex">
 			<ul class="menu menu-horizontal px-1">
 				{#each items as item}
-					<li>
+					<li class="mx-2">
 						{#if hasSubmenu(item)}
 							<details class="group">
-								<summary class="cursor-pointer flex justify-between items-center">
+								<summary
+									class="hover:underline cursor-pointer flex justify-between items-center text-lg {currentPage ===
+									item.label
+										? 'font-bold'
+										: ''}"
+								>
 									{item.label}
 								</summary>
-								<ul class="p-2 bg-base-100 rounded-box shadow-lg">
+								<ul class="p-2 rounded-box shadow-lg">
 									{#each item.submenu ?? [] as subitem}
 										<li>
-											<a class="block p-1 hover:bg-base-900" href={subitem.link}>{subitem.label}</a>
+											<a
+												class="block p-1 hover:underline text-lg {currentPage === subitem.label
+													? 'font-bold'
+													: ''}"
+												href={subitem.link}>{subitem.label}</a
+											>
 										</li>
 									{/each}
 								</ul>
 							</details>
 						{:else}
-							<a class="hover:underline" href={item.link}>{item.label}</a>
+							<a
+								class="hover:underline text-lg {currentPage === item.label ? 'font-bold' : ''}"
+								href={item.link}>{item.label}</a
+							>
 						{/if}
 					</li>
 				{/each}
@@ -76,19 +90,31 @@
 							<button
 								aria-haspopup="true"
 								aria-expanded="false"
-								class="flex justify-between w-full"
+								class="flex justify-between w-full text-lg {currentPage === item.label
+									? 'font-bold'
+									: ''}"
 							>
 								{item.label}
 							</button>
 							<ul class="p-2">
 								{#each item.submenu ?? [] as subitem}
 									<li>
-										<a class="block p-1 hover:bg-base-900" href={subitem.link}>{subitem.label}</a>
+										<a
+											class="block p-1 hover:underline text-lg {currentPage === subitem.label
+												? 'font-bold'
+												: ''}"
+											href={subitem.link}>{subitem.label}</a
+										>
 									</li>
 								{/each}
 							</ul>
 						{:else}
-							<a class="block p-1 hover:bg-base-200" href={item.link}>{item.label}</a>
+							<a
+								class="block p-1 hover:underline text-lg {currentPage === item.label
+									? 'font-bold'
+									: ''}"
+								href={item.link}>{item.label}</a
+							>
 						{/if}
 					</li>
 				{/each}

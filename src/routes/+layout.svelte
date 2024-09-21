@@ -34,9 +34,7 @@
 	];
 </script>
 
-<div
-	class="min-h-screen scrollbar scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-thumb-slate-800 scrollbar-w-3 h-16 overflow-y-scroll"
->
+<div class="min-h-screen scrollbar">
 	<Navbar items={navbarItems} />
 
 	<div class="min-h-screen">
