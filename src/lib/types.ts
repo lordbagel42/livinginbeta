@@ -9,4 +9,8 @@ export type Post = {
 	published: boolean
 }
 
+export type Note = Post & {
+	deploy: boolean
+}
+
 export type Blog = Post
