@@ -1,0 +1,3 @@
+[submodule "src/submodules/obsidian-notes"]
+	path = src/submodules/obsidian-notes
+	url = git@github.com:lordbagel42/obsidian-notes.git
