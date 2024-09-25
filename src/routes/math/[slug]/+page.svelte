@@ -13,11 +13,11 @@
 	<meta property="og:title" content={data.meta.title} />
 </svelte:head>
 
-<article class="max-w-4xl mx-auto p-6 bg-base-100 rounded-lg shadow-lg">
+<article class="max-w-90vw mx-auto p-6 bg-base-100 rounded-lg shadow-lg">
 	<!-- Title -->
 	<hgroup>
 		<h1 class="text-4xl font-bold capitalize">{data.meta.title}</h1>
-		<p class="mt-2 text-sm text-gray-500">Published on {formatDate(data.meta.date)}</p>
+		<p class="mt-2 text-sm text-gray-500">Published on {formatDate(data.meta.created)}</p>
 	</hgroup>
 
 	<!-- Tags -->
