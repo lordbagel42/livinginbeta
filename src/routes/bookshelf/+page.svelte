@@ -21,7 +21,8 @@
 				>
 					<li class="cursor-pointer">
 						<h2 class="text-2xl text-white underline">{post.title}</h2>
-						<p class="text-sm text-secondary mt-2">{formatDate(post.created)}</p>
+						<p class="text-sm text-secondary mt-2">Created on {formatDate(post.created)}</p>
+						<p class="text-sm text-secondary mt-2">Last updated on {formatDate(post.updated)}</p>
 						<p class="mt-4 text-base text-neutral-content">{post.description}</p>
 					</li>
 				</a>

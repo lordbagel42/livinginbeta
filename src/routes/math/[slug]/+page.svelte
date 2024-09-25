@@ -17,7 +17,7 @@
 	<!-- Title -->
 	<hgroup>
 		<h1 class="text-4xl font-bold capitalize">{data.meta.title}</h1>
-		<p class="mt-2 text-sm text-gray-500">Published on {formatDate(data.meta.date)}</p>
+		<p class="mt-2 text-sm text-gray-500">Published on {formatDate(data.meta.created)}</p>
 	</hgroup>
 
 	<!-- Tags -->

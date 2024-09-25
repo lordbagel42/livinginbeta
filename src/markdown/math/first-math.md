@@ -1,7 +1,7 @@
 ---
 title: First math post
 description: first time i write about math
-date: '2025-09-04'
+created: '2025-09-04'
 categories:
   - sveltekit
   - svelte
