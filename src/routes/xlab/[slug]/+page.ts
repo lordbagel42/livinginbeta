@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit'
 
 export async function load({ params }) {
 	try {
-		const post = await import(`../../../submodules/obsidian-notes/One Stone/math/${params.slug}.md`)
+		const post = await import(`../../../submodules/obsidian-notes/One Stone/xlab/${params.slug}.md`)
 
 		return {
 			content: post.default,

@@ -1,12 +1,12 @@
 import { json } from '@sveltejs/kit'
 import type { Post } from '$lib/types'
 
-const slugPrefix = '/math/'
+const slugPrefix = '/xlab/'
 
 async function getPosts() {
 	let posts: Post[] = []
 
-	const paths = import.meta.glob('/src/submodules/obsidian-notes/One Stone/math/*.md', { eager: true })
+	const paths = import.meta.glob('/src/submodules/obsidian-notes/One Stone/xlab/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]

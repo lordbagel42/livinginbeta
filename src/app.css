@@ -54,10 +54,12 @@ div.prose p {
 
 div.prose ul {
 	@apply list-disc mb-4;
+	@apply list-inside mb-4;
 }
 
 div.prose ol {
 	@apply list-decimal mb-4;
+	@apply list-inside mb-4;
 }
 
 div.prose a {
@@ -70,10 +72,6 @@ div.prose a:hover {
 
 div.prose code {
 	@apply rounded p-1;
-}
-
-div.prose ol {
-	@apply list-inside mb-4;
 }
 
 div.prose li {

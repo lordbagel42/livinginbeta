@@ -27,7 +27,7 @@
 		{ label: 'about me', link: '/about' },
 		{ label: 'math', link: '/math' },
 		// is part of permanent button { label: 'contact', link: '/contact' },
-		{ label: 'games', link: '/games' },
+		{ label: 'xlab', link: '/xlab' },
 		{ label: 'bookshelf', link: '/bookshelf' },
 		{ label: 'blog', link: '/blog' },
 		...[projects],
