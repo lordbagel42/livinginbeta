@@ -86,7 +86,7 @@
 
 <div class="flex justify-center items-center h-view">
 	<div class="text-center">
-		<p class="text-6xl">Hi.</p>
+		<p class="text-6xl">Hey.</p>
 		<h1 class="text-xl mt-2">
 			I'm <b>Sylvie.</b> I'm just another person that <span id="typewriter"></span>
 		</h1>
