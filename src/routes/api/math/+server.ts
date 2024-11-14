@@ -6,7 +6,7 @@ const slugPrefix = '/math/'
 async function getPosts() {
 	let posts: Post[] = []
 
-	const paths = import.meta.glob('/src/submodules/obsidian-notes/One Stone/math/*.md', { eager: true })
+	const paths = import.meta.glob('/src/markdown/math/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]

@@ -1,6 +1,8 @@
 import { json } from '@sveltejs/kit'
 import type { Post } from '$lib/types'
 
+const slugPrefix = '/blog/'
+
 async function getPosts() {
 	let posts: Post[] = []
 
@@ -8,12 +10,16 @@ async function getPosts() {
 
 	for (const path in paths) {
 		const file = paths[path]
-		const slug = '/blog/' + path.split('/').at(-1)?.replace('.md', '')
+		const slug = slugPrefix + path.split('/').at(-1)?.replace('.md', '')
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
+			console.log(file, file.metadata)
 			const metadata = file.metadata as Omit<Post, 'slug'>
 			const post: Post = { ...metadata, slug }
-			if (post.published) posts.push(post)
+			if (post.title === undefined) {
+				post.title = post.slug.replace(slugPrefix, '')
+			}
+			if (!post.published) posts.push(post)
 		}
 	}
 

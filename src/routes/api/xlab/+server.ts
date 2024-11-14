@@ -6,7 +6,7 @@ const slugPrefix = '/xlab/'
 async function getPosts() {
 	let posts: Post[] = []
 
-	const paths = import.meta.glob('/src/submodules/obsidian-notes/One Stone/xlab/*.md', { eager: true })
+	const paths = import.meta.glob('/src/markdown/xlab/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]

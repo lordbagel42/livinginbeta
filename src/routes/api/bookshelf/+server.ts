@@ -6,13 +6,14 @@ const slugPrefix = '/bookshelf/'
 async function getPosts() {
 	let posts: Post[] = []
 
-	const paths = import.meta.glob('/src/submodules/obsidian-notes/One Stone/bookshelf-to-blog/*.md', { eager: true })
+	const paths = import.meta.glob('/src/markdown/bookshelf-to-blogpost/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]
 		const slug = slugPrefix + path.split('/').at(-1)?.replace('.md', '')
 
 		if (file && typeof file === 'object' && 'metadata' in file && slug) {
+			console.log(file, file.metadata)
 			const metadata = file.metadata as Omit<Post, 'slug'>
 			const post: Post = { ...metadata, slug }
 			if (post.title === undefined) {
