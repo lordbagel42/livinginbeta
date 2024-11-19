@@ -28,9 +28,10 @@
 		{ label: 'math', link: '/math' },
 		// is part of permanent button { label: 'contact', link: '/contact' },
 		{ label: 'xlab', link: '/xlab' },
+		{ label: 'quilt', link: '/quilt' },
 		{ label: 'bookshelf', link: '/bookshelf' },
 		{ label: 'blog', link: '/blog' },
-		...[projects],
+		// ...[projects], // removing because idk what my motivation for this was
 		...[flexLab]
 	];
 </script>
